@@ -24,4 +24,7 @@
     <event name="controller_action_postdispatch_customer_address_formpost">
         <observer name="shipperhq_reset_address_validation" instance="ShipperHQ\Shipper\Observer\CustomerAddressEdit"/>
     </event>
+    <event name="controller_action_predispatch_paypal_express_gettoken">
+        <observer name="shipperhq_set_checkout" instance="ShipperHQ\Shipper\Observer\SetCheckoutFlag"/>
+    </event>
 </config>
